@@ -1,0 +1,43 @@
+[
+  {
+    "q": "I idnetify myself as:",
+    "a": ["male", "female", "other"]
+  },
+  {
+    "q": "My goal is:",
+    "a": ["loose weight", "eat healthy", "gain weigth / muscles"]
+  },
+  {
+    "q": "what is your weight?",
+    "a": []
+  },
+  {
+    "q": "Do you have any diet?",
+    "a": ["vegan", "vegetarian", "milk free", "gluten free"]
+  },
+  {
+    "q": "How meny meals per day do you eat?",
+    "a": ["3 meals (breakfest, lunch, diner)", "5 meals (snacks between meals)"]
+  },
+  {
+    "q": "Do you exercise?",
+    "a": [
+      "I dont do any sport activity",
+      "I do sports 1-2x per week",
+      "I do sports 3-4x per week",
+      "I do sports 5x per week and more"
+    ]
+  },
+  {
+    "q": "What is your daily activity?",
+    "a": [
+      "I am not active. I always go by car. I have a sedentary job.",
+      "I am active. I often go on foot.",
+      "I'm on my feet most of the day. I have a physically demanding job."
+    ]
+  },
+  {
+    "q": "What is your approximate body fat percentage?",
+    "a": []
+  }
+]

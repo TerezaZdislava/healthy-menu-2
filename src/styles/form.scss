@@ -1,0 +1,59 @@
+.formContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-right: var(--margin-box);
+  margin-left: var(--margin-box);
+  background-color: var(--light-grey);
+  border-radius: 0px 0px 0px 80px;
+  margin-bottom: var(--margin-md);
+  padding-bottom: var(--margin-sm);
+  align-items: center;
+  .formPart {
+    z-index: 0;
+  }
+  .buttons {
+    z-index: 0;
+    margin-top: var(--margin-sm);
+    align-self: center;
+    .back {
+      margin-right: var(--margin-sm);
+    }
+  }
+}
+.option {
+  margin-bottom: var(--margin-xs);
+  label {
+    margin-left: 10px;
+  }
+}
+.user-input {
+  padding: 10px;
+  border: 1px solid var(--green);
+  border-radius: 40px;
+}
+.checkboxes {
+  margin-bottom: var(--margin-sm);
+  label {
+    display: block;
+  }
+}
+img {
+  z-index: 0;
+  // width: 125px;
+  height: 350px;
+}
+h4 {
+  z-index: 0;
+}
+.formPart {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  img {
+    align-self: center;
+  }
+  .MuiBox-root {
+    align-self: center;
+  }
+}

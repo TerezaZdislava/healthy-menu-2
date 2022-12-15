@@ -1,0 +1,100 @@
+{
+  "meals": {
+    "breakfast": {
+      "1": {
+        "name": "tofu pasta",
+        "steps": "bla bla blaaaa bla bla blaaaa bla bla blaaaa bla bla blaaaa",
+        "image": "https://www.flickr.com/photos/197223571@N08/52563763972/in/dateposted-public/",
+        "vegetarian": true,
+        "vegan": true,
+        "milk free": true,
+        "gluten free": false,
+        "ingredients": [
+          {
+            "name": "pasta (can be gluten free)",
+            "grams": 70
+          },
+          {
+            "name": "tofu",
+            "grams": 100
+          },
+          {
+            "name": "carrot",
+            "grams": 50
+          }
+        ]
+      },
+      "2": {
+        "name": "yellow curry pasta",
+        "steps": "bla bla blaaaa bla bla blaaaa bla bla blaaaa bla bla blaaaa",
+        "image": "https://www.flickr.com/photos/197223571@N08/52563763947/in/dateposted-public",
+        "vegetarian": true,
+        "vegan": true,
+        "milk free": true,
+        "gluten free": false,
+        "ingredients": [
+          {
+            "name": "pasta (can be gluten free)",
+            "grams": 70
+          },
+          {
+            "name": "tofu",
+            "grams": 100
+          },
+          {
+            "name": "carrot",
+            "grams": 50
+          }
+        ]
+      }
+    },
+    "lunch and dinner": {
+      "1": {
+        "name": "dhal",
+        "image": "https://www.flickr.com/photos/197223571@N08/52564223541/in/dateposted-public/",
+        "steps": "bla bla blaaaa bla bla blaaaa bla bla blaaaa bla bla blaaaa",
+        "vegetarian": false,
+        "vegan": false,
+        "milk free": true,
+        "gluten free": true,
+        "ingredients": [
+          {
+            "name": "red lentils",
+            "grams": 70
+          },
+          {
+            "name": "rice",
+            "grams": 100
+          },
+          {
+            "name": "crushed tomatos",
+            "grams": 50
+          }
+        ]
+      },
+      "2": {
+        "name": "red curry",
+        "image": "https://www.flickr.com/photos/197223571@N08/52564752393/in/dateposted-public/",
+        "steps": "bla bla blaaaa bla bla blaaaa bla bla blaaaa bla bla blaaaa",
+        "vegetarian": false,
+        "vegan": false,
+        "milk free": true,
+        "gluten free": true,
+        "ingredients": [
+          {
+            "name": "red lentils",
+            "grams": 70
+          },
+          {
+            "name": "rice",
+            "grams": 100
+          },
+          {
+            "name": "crushed tomatos",
+            "grams": 50
+          }
+        ]
+      }
+    }
+  }
+}

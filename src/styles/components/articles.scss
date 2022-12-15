@@ -1,0 +1,108 @@
+.news {
+  background-color: var(--dark-blue);
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: var(--margin-box);
+  // padding-right: var(--margin-box);
+  color: var(--white);
+  .text {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      color: var(--white);
+      margin-bottom: 50px;
+    }
+    .buttons {
+      padding-right: var(--margin-box);
+      display: flex;
+    }
+    button {
+      border: none;
+      margin-left: 20px;
+      background-color: var(--dark-blue);
+      border-radius: 50%;
+      width: 64px;
+      height: 64px;
+      padding: 0;
+      .left {
+        transform: rotateY(180deg);
+      }
+    }
+    button:hover {
+      background-color: var(--white);
+    }
+  }
+  .carousel {
+    overflow: hidden;
+    height: 100%;
+  }
+  .article-box {
+    display: inline-flex;
+    transition: all 1s ease-in-out;
+    .article {
+      overflow: hidden;
+      width: 686px;
+      height: 459px;
+      margin-right: 30px;
+      border-radius: 9px;
+      .content {
+        transition: all 0.5s;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        -webkit-box-shadow: inset 0px -50px 50px -30px rgba(0, 0, 0, 0.7);
+        box-shadow: inset 0px -80px 150px 20px rgba(0, 0, 0, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: 50px;
+      }
+      h3 {
+        max-width: 418px;
+        font-size: 24px;
+        margin-bottom: 0;
+        line-height: 24px;
+      }
+    }
+    .article:hover {
+      .content {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .news {
+    padding: 30px 0;
+    .text {
+      margin-left: 36px;
+      margin-right: 36px;
+      h1 {
+        font-size: 36px;
+      }
+      .buttons {
+        display: none;
+      }
+    }
+    .carousel {
+      overflow: auto;
+      .article-box {
+        margin-left: 36px;
+        margin-right: 36px;
+        .article {
+          width: 236px;
+          height: 286px;
+          .content {
+            padding: 20px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.menuContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-right: var(--margin-box);
+  margin-left: var(--margin-box);
+  background-color: var(--light-grey);
+  border-radius: 0px 0px 0px 80px;
+  margin-bottom: var(--margin-md);
+  // padding: var(--margin-md);
+  .meal {
+    padding: var(--margin-md);
+    .headline {
+      margin-bottom: var(--margin-xs);
+    }
+    img {
+      border-radius: 9px;
+      transition: all 0.5s;
+      height: 500px;
+      width: 700px;
+      object-fit: cover;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    .top {
+      display: flex;
+      // .left {
+      //   width: 60%;
+      // }
+      .right {
+        width: 100%;
+        position: relative;
+        .square {
+          transition: all 0.5s;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          border-radius: 9px;
+          justify-content: center;
+          position: absolute;
+        }
+        .square:hover {
+          z-index: 6;
+          transform: scale(1.05);
+        }
+        .square1 {
+          bottom: -10%;
+          left: -20px;
+          width: 200px;
+          height: 200px;
+          background-color: var(--green);
+          color: var(--white);
+          h1 {
+            color: var(--white);
+          }
+        }
+        .square2 {
+          width: 200px;
+          height: 200px;
+          top: 20%;
+          left: 10%;
+          background-color: var(--grey);
+          color: var(--white);
+        }
+        .square3 {
+          width: 200px;
+          height: 200px;
+          top: 10%;
+          left: 40%;
+          background-color: var(--white);
+          color: var(--dark-blue);
+        }
+        .square4 {
+          top: 80%;
+          left: 30%;
+          width: 230px;
+          height: 230px;
+          background-color: var(--dark-blue);
+          color: var(--white);
+          h1 {
+            color: var(--white);
+          }
+        }
+      }
+    }
+    section {
+      margin-top: var(--margin-sm);
+    }
+  }
+}

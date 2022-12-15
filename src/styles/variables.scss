@@ -1,0 +1,113 @@
+//----colors
+// $primary: red;
+// $secondary-text-color: white;
+
+//----fonts
+// $headline-font: 'Quicksand', sans-serif;
+// $text-font: 'Quicksand', sans-serif;
+
+// $base-margin: 30px;
+// $margin-btw-elms: 70px;
+:root {
+  --white: #ffffff;
+  --light-grey: #f5f7fa;
+  --grey: #aaaaaa;
+  --dark-grey: #4d4d4f;
+  --black: #1a1a1a;
+  --dark-blue: #14274d;
+  --blue: #00467f;
+  --margin-box: 260px;
+  --button-pading: 14px 20px;
+  --green: #799f0c;
+  --yellow: #ffe000;
+  --margin-xs: 10px;
+  --margin-sm: 30px;
+  --margin-md: 70px;
+  --margin-lg: 100px;
+}
+$green: #799f0c;
+
+body {
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  font-family: 'Fira Sans', sans-serif;
+  background-color: var(--white);
+  scroll-behavior: smooth;
+}
+
+h1 {
+  margin: 0;
+  color: var(--dark-blue);
+  font-size: 48px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+}
+h3 {
+  color: var(--white);
+  font-size: 18px;
+  font-weight: bold;
+}
+h4 {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: bold;
+}
+p {
+  color: var(--black);
+  font-size: 18px;
+  line-height: 24px;
+}
+span {
+  line-height: 24px;
+}
+.color--grey {
+  color: var(--grey);
+}
+.color--white {
+  color: var(--white);
+}
+.color--dark-blue {
+  color: var(--dark-blue);
+}
+.color--violet {
+  color: var(--violet);
+}
+.color--black {
+  color: var(--black);
+}
+button {
+  cursor: pointer;
+}
+.button-primary {
+  background-color: var(--green);
+  color: white;
+  border-radius: 40px;
+  padding: var(--button-pading);
+  font-size: 18px;
+  border: none;
+  font-family: 'Fira Sans', sans-serif;
+}
+.button-primary:hover {
+  background-color: darken($green, 10%);
+}
+.button-secondary {
+  background-color: white;
+  color: var(--green);
+  border-radius: 40px;
+  padding: var(--button-pading);
+  font-size: 18px;
+  border: none;
+  font-family: 'Fira Sans', sans-serif;
+}
+.button-secondary:hover {
+  background-color: darken(white, 10%);
+  color: darken($green, 10%);
+}
