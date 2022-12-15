@@ -6,11 +6,11 @@ import Menu from './pages/Menu';
 import UserForm from './pages/UserForm';
 import {
   ref,
-  child,
+  // child,
   get,
   query,
-  limitToLast,
-  onValue,
+  // limitToLast,
+  // onValue,
   orderByChild,
   equalTo,
   limitToFirst,
@@ -63,6 +63,7 @@ function App() {
         setBreakfast(snapshot.val());
       } else {
         console.log('err');
+        console.log(formData);
       }
     });
     get(query(dbRefLunch, ...meatConstraints)).then((snapshot) => {
