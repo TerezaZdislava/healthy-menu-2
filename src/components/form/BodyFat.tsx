@@ -1,5 +1,3 @@
-import { FormDataInt, FormQuestionObj } from '../../pages/UserForm';
-import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import {
@@ -7,6 +5,8 @@ import {
   maleFatImages,
   otherFatImages,
 } from '../../data/fatImages';
+import FormDataInt from '../../interface/form';
+import { FormQuestionObj } from '../../interface/question';
 
 function BodyFat({
   formData,

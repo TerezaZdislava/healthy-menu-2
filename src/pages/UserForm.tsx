@@ -5,44 +5,14 @@ import Diets from '../components/form/Diets';
 import Personal from '../components/form/Personal';
 import StepperWrapper from '../components/form/StepperWrapper';
 import formquestions from '../data/form.json';
+import FormDataInt from '../interface/form';
+import DefaultFormDataInt from '../interface/formData';
 import '../styles/form.scss';
-
-export type DietTypes =
-  | 'vegan'
-  | 'vegetarian'
-  | 'lactose free'
-  | 'gluten free'
-  | null;
-
-export interface FormDataInt {
-  gender: string;
-  weight: number;
-  goal: string;
-  // numberOfMeals: number;
-  sportFrequency: string;
-  jobActivity: string;
-  bodyFat: number;
-  diet: DietTypes;
-}
-
-export interface FormQuestionObj {
-  q: string;
-  a: Array<string>;
-}
 
 function UserForm(props: any) {
   const [step, setStep] = useState(0);
 
-  const [formData, setFormData] = useState<FormDataInt>({
-    gender: '',
-    weight: 70,
-    goal: '',
-    // numberOfMeals: 3,
-    sportFrequency: '',
-    jobActivity: '',
-    bodyFat: 3,
-    diet: null,
-  });
+  const [formData, setFormData] = useState<FormDataInt>(DefaultFormDataInt);
 
   const view = () => {
     switch (step) {

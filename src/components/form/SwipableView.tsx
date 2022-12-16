@@ -1,5 +1,4 @@
-import { FormQuestionObj } from '../../pages/UserForm';
-
+import { FormQuestionObj } from '../../interface/question';
 export interface propsType {
   questionArray: Array<FormQuestionObj>;
   questionType: 'checkbox' | 'radio' | 'slider';

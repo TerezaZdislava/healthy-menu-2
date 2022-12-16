@@ -1,7 +1,8 @@
-import { FormDataInt, FormQuestionObj } from '../../pages/UserForm';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
+import FormDataInt from '../../interface/form';
+import { FormQuestionObj } from '../../interface/question';
 
 function Diet({
   formData,
@@ -12,12 +13,12 @@ function Diet({
   setFormData: any;
   formquestions: FormQuestionObj[];
 }) {
-  const numberOfMealsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      numberOfMeals: (event.target as HTMLInputElement).value,
-    });
-  };
+  // const numberOfMealsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setFormData({
+  //     ...formData,
+  //     numberOfMeals: (event.target as HTMLInputElement).value,
+  //   });
+  // };
 
   const dietChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({

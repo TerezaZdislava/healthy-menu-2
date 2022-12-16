@@ -1,5 +1,10 @@
+.menuComponent {
+  display: flex;
+  justify-content: center;
+}
 .menuContainer {
   display: flex;
+  max-width: 1100px;
   position: relative;
   flex-direction: column;
   margin-right: var(--margin-box);
@@ -7,82 +12,70 @@
   background-color: var(--light-grey);
   border-radius: 0px 0px 0px 80px;
   margin-bottom: var(--margin-md);
-  // padding: var(--margin-md);
+  padding: var(--margin-md);
   .meal {
-    padding: var(--margin-md);
+    display: flex;
+    margin-bottom: var(--margin-md);
     .headline {
       margin-bottom: var(--margin-xs);
     }
-    img {
-      border-radius: 9px;
-      transition: all 0.5s;
-      height: 500px;
-      width: 700px;
-      object-fit: cover;
+    .right {
+      width: 70%;
     }
-    img:hover {
-      transform: scale(1.05);
-    }
-    .top {
+    .left {
+      width: 30%;
+      padding: var(--margin-sm);
+      background-color: var(--white);
       display: flex;
-      // .left {
-      //   width: 60%;
-      // }
-      .right {
-        width: 100%;
-        position: relative;
-        .square {
-          transition: all 0.5s;
-          text-align: center;
+      flex-direction: column;
+      border-radius: 9px;
+      margin-right: var(--margin-md);
+      .ingredients {
+        .ingredient {
           display: flex;
-          flex-direction: column;
-          border-radius: 9px;
-          justify-content: center;
-          position: absolute;
-        }
-        .square:hover {
-          z-index: 6;
-          transform: scale(1.05);
-        }
-        .square1 {
-          bottom: -10%;
-          left: -20px;
-          width: 200px;
-          height: 200px;
-          background-color: var(--green);
-          color: var(--white);
-          h1 {
-            color: var(--white);
+          margin-bottom: var(--margin-sm);
+          h4 {
+            margin: 0;
+            margin-right: var(--margin-xs);
           }
         }
-        .square2 {
-          width: 200px;
-          height: 200px;
-          top: 20%;
-          left: 10%;
-          background-color: var(--grey);
-          color: var(--white);
+      }
+
+      .card {
+        margin-bottom: var(--margin-md);
+        .text {
+          display: flex;
+          margin-bottom: var(--margin-sm);
+          span {
+            width: 50%;
+          }
+          h4 {
+            margin: 0;
+          }
         }
-        .square3 {
-          width: 200px;
-          height: 200px;
-          top: 10%;
-          left: 40%;
-          background-color: var(--white);
-          color: var(--dark-blue);
-        }
-        .square4 {
-          top: 80%;
-          left: 30%;
-          width: 230px;
-          height: 230px;
-          background-color: var(--dark-blue);
-          color: var(--white);
-          h1 {
+        .icon-background {
+          background-color: var(--green);
+          width: 60px;
+          height: 60px;
+          border-radius: 5px;
+          margin-bottom: var(--margin-md);
+          svg {
+            font-size: 55px;
             color: var(--white);
           }
         }
       }
+    }
+    img {
+      border-radius: 9px;
+      transition: all 0.5s;
+      height: 300px;
+      width: 500px;
+      object-fit: cover;
+      margin-bottom: var(--margin-sm);
+    }
+    img:hover {
+      transform: scale(1.05);
     }
     section {
       margin-top: var(--margin-sm);
