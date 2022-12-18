@@ -6,7 +6,7 @@ import '../styles/menu.scss';
 function Meal({ meal }: { meal: meal }) {
   return (
     <>
-      <h1 className="headline">{meal?.name}</h1>
+      <h5 className="headline">{meal?.name}</h5>
       <div className="meal">
         <section className="left">
           <div className="card">

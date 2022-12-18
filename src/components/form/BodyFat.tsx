@@ -26,10 +26,10 @@ function BodyFat({
   }
 
   function imgSrc() {
-    if (formData.gender === 'male') {
+    if (formData.gender === 'Male') {
       return maleFatImages[formData.bodyFat - 1];
     }
-    if (formData.gender === 'female') {
+    if (formData.gender === 'Female') {
       return femFatImages[formData.bodyFat - 1];
     } else {
       return otherFatImages[formData.bodyFat - 1];
