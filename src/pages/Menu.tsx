@@ -9,17 +9,23 @@ function Menu({
   breakfast,
   lunch,
   dinner,
+  goal,
+  calories,
+  diet,
 }: {
   breakfast: meal;
   lunch: meal;
   dinner: meal;
+  goal: string;
+  diet: string;
+  calories: number;
 }) {
   return (
     <div className="menuComponent">
       <div className="menuContainer">
         <span>Your healthy</span>
         <h1>Daily menu</h1>
-        <Card />
+        <Card goal={goal} calories={calories} diet={diet} />
         <span>Breakfast</span>
         <Meal meal={breakfast} />
         <span>Lunch</span>

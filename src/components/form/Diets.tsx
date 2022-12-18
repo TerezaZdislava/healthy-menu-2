@@ -39,22 +39,22 @@ function Diet({
           onChange={dietChange}
         >
           <FormControlLabel
-            value={formquestions[0].a[0]}
+            value={'vegan'}
             control={<Radio color="secondary" />}
             label={formquestions[0].a[0]}
           />
           <FormControlLabel
-            value={formquestions[0].a[1]}
+            value={'vegetarian'}
             control={<Radio color="secondary" />}
             label={formquestions[0].a[1]}
           />
           <FormControlLabel
-            value={formquestions[0].a[2]}
+            value={'lactoseFree'}
             control={<Radio color="secondary" />}
             label={formquestions[0].a[2]}
           />
           <FormControlLabel
-            value={formquestions[0].a[3]}
+            value={'glutenFree'}
             control={<Radio color="secondary" />}
             label={formquestions[0].a[3]}
           />

@@ -4,24 +4,32 @@ import RestaurantRoundedIcon from '@mui/icons-material/RestaurantRounded';
 import '../styles/components/card.scss';
 import { SvgIcon } from '@mui/material';
 
-function Card() {
+function Card({
+  goal,
+  calories,
+  diet,
+}: {
+  goal: string;
+  diet: string;
+  calories: number;
+}) {
   const data = [
     {
       icon: FlagRoundedIcon,
       name: 'Goal',
-      selected: 'Reduce weight',
+      selected: goal,
       text: 'lorem ipsum lorem ipsum lorem ipsum ',
     },
     {
       icon: ElectricBoltRoundedIcon,
       name: 'Calories',
-      selected: '1893 kcal',
+      selected: calories,
       text: 'lorem ipsum lorem ipsum lorem ipsum ',
     },
     {
       icon: RestaurantRoundedIcon,
       name: 'Diet',
-      selected: 'Lactose free',
+      selected: diet,
       text: 'lorem ipsum lorem ipsum lorem ipsum ',
     },
   ];

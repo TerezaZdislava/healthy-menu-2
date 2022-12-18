@@ -5,106 +5,161 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import UserForm from './pages/UserForm';
 import db from './firebase';
-import FormDataInt from './interface/form';
+import FormDataInt, { DietTypes } from './interface/form';
 import DefaultFormDataInt from './interface/formData';
-import { collection, query, where, limit, getDocs } from 'firebase/firestore';
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  getCountFromServer,
+} from 'firebase/firestore';
+import formResponses from './data/form.json';
 
 function App() {
   const navigate = useNavigate();
   const [breakfast, setBreakfast] = useState<any>();
   const [lunch, setLunch] = useState<any>();
   const [dinner, setDinner] = useState<any>();
+  const [calories, setCalories] = useState<number>();
   const [formData, setFormData] = useState<FormDataInt>(DefaultFormDataInt);
 
-  // function getMeals(diet: string) {
-  //   const dbRefBreakfast = ref(db, 'meals/breakfast');
-  //   const dbRefLunch = ref(db, 'meals/lunch and dinner');
-  //   const meatConstraints = [
-  //     limitToFirst(1),
-  //     orderByChild('milk free'),
-  //     equalTo(true),
-  //     // limitToFirst(1),
-  //   ];
-  //   get(query(dbRefBreakfast, ...meatConstraints)).then((snapshot) => {
-  //     if (snapshot.exists()) {
-  //       console.log(snapshot.val());
-  //       setBreakfast(snapshot.val());
-  //     } else {
-  //       console.log('err');
-  //       console.log(formData);
-  //     }
-  //   });
-  //   get(query(dbRefLunch, ...meatConstraints)).then((snapshot) => {
-  //     if (snapshot.exists()) {
-  //       console.log(snapshot.val());
-  //       setLunch(snapshot.val());
-  //     } else {
-  //       console.log('err');
-  //     }
-  //   });
-  //   navigate('/menu');
-  //   // console.log('recentPostsRef ' + recentPostsRef);
-  // }
-
+  // ---- adding docs to firestore ----
   // try {
-  // const docRef = addDoc(collection(db, 'lunch', '1'), {
-  // const docRef = db.collection('lunch').doc('0')
   // const docRef = setDoc(doc(db, 'lunch', '1'), {});
   //   console.log('Document written with ID: ', docRef);
   // } catch (e) {
   //   console.error('Error adding document: ', e);
   // }
+  //-----------------------------------------
 
-  // Breakfast {
-  // const breakfastDB = collection(db, 'breakfast');
-  // const q = query(breakfastDB, where('lactoseFree', '==', true), limit(2));
-  // async function getBreakfast() {
-  //   const newDoc = await getDocs(q);
-  //   newDoc.forEach((doc) => {
-  //     console.log(doc.id, ' => ', doc.data());
-  //   });
-  //   navigate('/menu');
-  // }
+  //---count calories per day---------------
 
-  const lunchDB = collection(db, 'lunch');
-  const breakfastDB = collection(db, 'breakfast');
-  const lunchquery = query(lunchDB, where('lactoseFree', '==', true), limit(2));
-  const breakfastquery = query(
-    breakfastDB,
-    where('lactoseFree', '==', true),
-    limit(1),
-  );
-  async function getMeal() {
+  function mapGenderValues(gender) {
+    switch (gender) {
+      case formResponses[0].a[0]:
+        return 1.1;
+      case formResponses[0].a[1]:
+        return 0.8;
+      case formResponses[0].a[2]:
+        return 1;
+    }
+  }
+
+  function mapGoalValues(goal) {
+    switch (goal) {
+      case formResponses[1].a[0]:
+        return 0.8;
+      case formResponses[1].a[1]:
+        return 1;
+      case formResponses[1].a[2]:
+        return 1.1;
+    }
+  }
+
+  function mapSportFrequency(frequency) {
+    switch (frequency) {
+      case formResponses[5].a[0]:
+        return 0.9;
+      case formResponses[5].a[1]:
+        return 1;
+      case formResponses[5].a[2]:
+        return 1.1;
+      case formResponses[5].a[3]:
+        return 1.2;
+    }
+  }
+
+  function mapJobActivity(activity) {
+    switch (activity) {
+      case formResponses[6].a[0]:
+        return 0.9;
+      case formResponses[6].a[1]:
+        return 1;
+      case formResponses[6].a[2]:
+        return 1.1;
+    }
+  }
+
+  function countCalories(formdata: FormDataInt) {
+    const gender = mapGenderValues(formdata.gender);
+    const goal = mapGoalValues(formdata.goal);
+    const sportFrequency = mapSportFrequency(formdata.sportFrequency);
+    const jobActivity = mapJobActivity(formdata.jobActivity);
+    const result =
+      (((formdata.weight - (formdata.bodyFat / 100) * formdata.weight) * 21.6 +
+        370) *
+        ((goal + gender + sportFrequency + jobActivity) / 4)) /
+      1789;
+    setCalories(Math.round(2200 * result));
+  }
+
+  async function getLunchAndDinner(diet: DietTypes) {
+    // console.log('formData.diet ' + diet);
+    const lunchDB = collection(db, 'lunch');
+    const lunchquery = query(
+      lunchDB,
+      diet !== null ? where(diet, '==', true) : null,
+    );
+    const collectionSize = await getCountFromServer(lunchquery);
+    const dinnerindex: number = Math.round(
+      Math.random() * collectionSize.data().count,
+    );
+    const lunchindex: number = Math.round(
+      Math.random() * collectionSize.data().count,
+    );
     const lunchDoc = await getDocs(lunchquery);
-    let arr = [];
+    let meals = [];
     lunchDoc.forEach((doc) => {
-      console.log(doc.id, ' => ', doc.data());
-      // let data: meal = doc.data()
-      arr.push(doc.data());
+      meals.push(doc.data());
     });
-    setLunch(arr[0]);
-    setDinner(arr[1]);
+    // console.log(meals);
+    setLunch(meals[lunchindex - 1]);
+    setDinner(meals[dinnerindex - 1]);
+  }
+
+  async function getBreakfast(diet: DietTypes) {
+    const breakfastDB = collection(db, 'breakfast');
+    const breakfastquery = query(
+      breakfastDB,
+      diet !== null ? where(diet, '==', true) : null,
+    );
+    const collectionSize = await getCountFromServer(breakfastquery);
+    const index: number = Math.round(
+      Math.random() * collectionSize.data().count,
+    );
     const breakfastDoc = await getDocs(breakfastquery);
+    console.log(index);
+    let meals = [];
     breakfastDoc.forEach((doc) => {
-      console.log(doc.id, ' => ', doc.data());
-      // let data: meal = doc.data()
-      setBreakfast(doc.data());
+      meals.push(doc.data());
     });
-    navigate('/menu');
+    setBreakfast(meals[index - 1]);
   }
 
   function handleFormChange(formData: any) {
-    console.log(formData);
     setFormData(formData);
-    getMeal();
+    getLunchAndDinner(formData.diet);
+    getBreakfast(formData.diet);
+    countCalories(formData);
+    navigate('/menu');
   }
-  console.log(formData);
+
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route
         path="/menu"
-        element={<Menu breakfast={breakfast} lunch={lunch} dinner={dinner} />}
+        element={
+          <Menu
+            breakfast={breakfast}
+            lunch={lunch}
+            dinner={dinner}
+            goal={formData.goal}
+            calories={calories}
+            diet={formData.diet}
+          />
+        }
       />
       <Route
         path="/form"

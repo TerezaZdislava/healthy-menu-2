@@ -1,8 +1,8 @@
 export type DietTypes =
   | 'vegan'
   | 'vegetarian'
-  | 'lactose free'
-  | 'gluten free'
+  | 'lactoseFree'
+  | 'glutenFree'
   | null;
 
 export interface FormDataInt {

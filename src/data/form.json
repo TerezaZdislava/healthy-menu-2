@@ -1,11 +1,11 @@
 [
   {
     "q": "I idnetify myself as:",
-    "a": ["male", "female", "other"]
+    "a": ["Male", "Female", "Other"]
   },
   {
     "q": "My goal is:",
-    "a": ["loose weight", "eat healthy", "gain weigth / muscles"]
+    "a": ["Loose weight", "Eat healthy", "Gain weigth / muscles"]
   },
   {
     "q": "what is your weight?",
@@ -13,7 +13,7 @@
   },
   {
     "q": "Do you have any diet?",
-    "a": ["vegan", "vegetarian", "milk free", "gluten free"]
+    "a": ["Vegan", "Vegetarian", "Lactose free", "Gluten free"]
   },
   {
     "q": "How meny meals per day do you eat?",
