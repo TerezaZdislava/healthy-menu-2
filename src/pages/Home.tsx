@@ -60,7 +60,12 @@ function Home() {
               goals or food preferences.
             </span>
             <span>Try our app and get your healthy menu for free.</span>
-            <button className="button-primary">Get me my healthy menu</button>
+            <button
+              className="button-primary"
+              onClick={() => navigate('/form')}
+            >
+              Get me my healthy menu
+            </button>
           </div>
         </div>
       </section>

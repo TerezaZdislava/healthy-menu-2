@@ -9,7 +9,7 @@ function Meal({ meal }: { meal: meal }) {
       <h5 className="headline">{meal?.name}</h5>
       <div className="meal">
         <section className="left">
-          <div className="card">
+          <div className="info">
             <div className="icon-background">
               <SvgIcon component={TaskIcon} />
             </div>

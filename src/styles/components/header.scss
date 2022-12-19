@@ -18,6 +18,9 @@ $blue: #00467f;
   z-index: 1;
   .mobile-menu-icon {
     display: none;
+    border: none;
+    background-color: transparent;
+    color: var(--green);
   }
 }
 .links {

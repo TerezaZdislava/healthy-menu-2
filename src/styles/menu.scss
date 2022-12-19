@@ -41,7 +41,7 @@
         }
       }
 
-      .card {
+      .info {
         margin-bottom: var(--margin-md);
         .text {
           display: flex;
@@ -98,6 +98,35 @@
     display: flex;
     button {
       margin: var(--margin-sm);
+    }
+  }
+}
+@media (max-width: 500px) {
+  .menuContainer {
+    width: 100vw;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .meal {
+    margin: 15px;
+    flex-direction: column;
+    .left {
+      margin: 0 !important;
+      padding: 10px !important;
+      width: auto !important;
+      .info {
+        padding: 10px !important;
+      }
+    }
+    .right {
+      // padding: 10px !important;
+      width: 100%;
+      width: auto !important;
+      display: flex;
+      flex-direction: column;
+      img {
+        width: auto;
+      }
     }
   }
 }

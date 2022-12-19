@@ -118,3 +118,18 @@ button {
   background-color: darken(white, 10%);
   color: darken($green, 10%);
 }
+
+@media (max-width: 500px) {
+  h1 {
+    line-height: inherit;
+    font-size: 28px !important;
+  }
+  h2 {
+    line-height: inherit;
+    font-size: 16px !important;
+  }
+  h5 {
+    line-height: inherit;
+    font-size: 22px !important;
+  }
+}
