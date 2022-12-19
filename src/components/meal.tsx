@@ -32,7 +32,7 @@ function Meal({ meal }: { meal: meal }) {
           </div>
           <div className="ingredients">
             <h2>Ingredients</h2>
-            {meal?.ingredients.map(function (elm: Ingredient, i: number) {
+            {meal?.ingredients?.map(function (elm: Ingredient, i: number) {
               return (
                 <div className="ingredient" key={i}>
                   <h4>{elm.grams} g</h4>

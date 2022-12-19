@@ -75,7 +75,11 @@ $blue: #00467f;
 }
 
 .logo {
-  height: 70px;
+  img {
+    height: 70px;
+  }
+  background-color: transparent;
+  border: none;
 }
 .right-half {
   display: flex;
@@ -93,8 +97,10 @@ $blue: #00467f;
     padding-right: 38px;
     z-index: 2;
     .logo {
-      width: 36px;
-      height: 30px;
+      img {
+        width: 36px;
+        height: 30px;
+      }
     }
     .links,
     .right-half {

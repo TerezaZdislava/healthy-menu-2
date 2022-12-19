@@ -8,10 +8,12 @@ function Activity({
   formData,
   setFormData,
   formquestions,
+  errors,
 }: {
   formData: FormDataInt;
   setFormData: any;
   formquestions: FormQuestionObj[];
+  errors: boolean;
 }) {
   const sportFrequencyChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -30,6 +32,7 @@ function Activity({
   return (
     <form className="formPart">
       <section className="question">
+        {errors && <span className="error">Required *</span>}
         <h4>{formquestions[0].q}</h4>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
@@ -61,6 +64,7 @@ function Activity({
         </RadioGroup>
       </section>
       <section className="question">
+        {errors && <span className="error">Required *</span>}
         <h4>{formquestions[1].q}</h4>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"

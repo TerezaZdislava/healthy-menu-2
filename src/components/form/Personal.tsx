@@ -8,16 +8,17 @@ function Personal({
   formData,
   setFormData,
   formquestions,
+  errors,
 }: {
   formData: FormDataInt;
   setFormData: any;
   formquestions: FormQuestionObj[];
+  errors: boolean;
 }) {
-  const handleWeightChange = (number: string) => {
-    const weight = parseInt(number);
+  const handleWeightChange = (weight: string) => {
     setFormData({
       ...formData,
-      weight: weight,
+      weight: parseInt(weight),
     });
   };
 
@@ -38,6 +39,7 @@ function Personal({
   return (
     <form className="formPart">
       <section className="question">
+        {errors && <span className="error">Required *</span>}
         <h4>{formquestions[0].q}</h4>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
@@ -64,6 +66,7 @@ function Personal({
         </RadioGroup>
       </section>
       <section className="question">
+        {errors && <span className="error">Required *</span>}
         <h4>{formquestions[1].q}</h4>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
@@ -90,9 +93,14 @@ function Personal({
         </RadioGroup>
       </section>
       <section className="question">
+        {errors && (
+          <span className="error">Weight must be between 50 kg and 150 kg</span>
+        )}
         <h4>{formquestions[2].q}</h4>
         <div>
           <input
+            min={50}
+            max={120}
             className="user-input"
             type="number"
             value={formData.weight}
@@ -102,146 +110,5 @@ function Personal({
       </section>
     </form>
   );
-
-  // return (
-  //   <form className="formPart">
-  //     <section className="question">
-  //       <h4>{formquestions[0].q}</h4>
-  //       <div>
-  //         <div
-  //           className="option"
-  //           onClick={() =>
-  //             setFormData({
-  //               ...formData,
-  //               gender: formquestions[0].a[0],
-  //             })
-  //           }
-  //         >
-  //           <input
-  //             type="radio"
-  //             value={formquestions[0].a[0]}
-  //             id={formquestions[0].a[0]}
-  //             checked={formData.gender === formquestions[0].a[0]}
-  //             onChange={() =>
-  //               setFormData({
-  //                 ...formData,
-  //                 gender: formquestions[0].a[0],
-  //               })
-  //             }
-  //           />
-  //           <label>{formquestions[0].a[0]}</label>
-  //         </div>
-  //         <div
-  //           className="option"
-  //           onClick={() =>
-  //             setFormData({
-  //               ...formData,
-  //               gender: formquestions[0].a[1],
-  //             })
-  //           }
-  //         >
-  //           <input
-  //             type="radio"
-  //             value={formquestions[0].a[1]}
-  //             id={formquestions[0].a[1]}
-  //             checked={formData.gender === formquestions[0].a[1]}
-  //             onChange={() =>
-  //               setFormData({
-  //                 ...formData,
-  //                 gender: formquestions[0].a[1],
-  //               })
-  //             }
-  //           />
-  //           <label>{formquestions[0].a[1]}</label>
-  //         </div>
-  //         <div
-  //           className="option"
-  //           onClick={() =>
-  //             setFormData({
-  //               ...formData,
-  //               gender: formquestions[0].a[2],
-  //             })
-  //           }
-  //         >
-  //           <input
-  //             type="radio"
-  //             name="gender"
-  //             value={formquestions[0].a[2]}
-  //             id={formquestions[0].a[2]}
-  //             checked={formData.gender === formquestions[0].a[2]}
-  //             onChange={() =>
-  //               setFormData({
-  //                 ...formData,
-  //                 gender: formquestions[0].a[2],
-  //               })
-  //             }
-  //           />
-  //           <label>{formquestions[0].a[2]}</label>
-  //         </div>
-  //       </div>
-  //     </section>
-  //     <section className="question">
-  //       <h4>{formquestions[1].q}</h4>
-  //       <div className="App">
-  //         <div className="option">
-  //           <input
-  //             type="radio"
-  //             value={formquestions[1].a[0]}
-  //             id={formquestions[1].a[0]}
-  //             checked={formData.goal === formquestions[1].a[0]}
-  //             onChange={() =>
-  //               setFormData({
-  //                 ...formData,
-  //                 goal: formquestions[1].a[0],
-  //               })
-  //             }
-  //           />
-  //           <label htmlFor="regular">{formquestions[1].a[0]}</label>
-  //         </div>
-  //         <div className="option">
-  //           <input
-  //             type="radio"
-  //             value={formquestions[1].a[1]}
-  //             id={formquestions[1].a[1]}
-  //             checked={formData.goal === formquestions[1].a[1]}
-  //             onChange={() =>
-  //               setFormData({
-  //                 ...formData,
-  //                 goal: formquestions[1].a[1],
-  //               })
-  //             }
-  //           />
-  //           <label htmlFor="regular">{formquestions[1].a[1]}</label>
-  //         </div>
-  //         <div className="option">
-  //           <input
-  //             type="radio"
-  //             value={formquestions[1].a[2]}
-  //             id={formquestions[1].a[2]}
-  //             checked={formData.goal === formquestions[1].a[2]}
-  //             onChange={() =>
-  //               setFormData({
-  //                 ...formData,
-  //                 goal: formquestions[1].a[2],
-  //               })
-  //             }
-  //           />
-  //           <label htmlFor="regular">{formquestions[1].a[2]}</label>
-  //         </div>
-  //       </div>
-  //     </section>
-  //     <section className="question">
-  //       <h4>{formquestions[2].q}</h4>
-  //       <div className="App">
-  //         <input
-  //           className="user-input"
-  //           type="number"
-  //           value={formData.weight}
-  //           onChange={(e) => handleWeightChange(e.target.value)}
-  //         />
-  //       </div>
-  //     </section>
-  //   </form>
-  // );
 }
 export default Personal;

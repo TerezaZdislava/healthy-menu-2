@@ -9,16 +9,40 @@ import FormDataInt from '../interface/form';
 import DefaultFormDataInt from '../interface/formData';
 import '../styles/form.scss';
 
-function UserForm(props: any) {
+function UserForm({ sendformToParent }: { sendformToParent: Function }) {
   const [step, setStep] = useState(0);
-
+  const [errors, setErrors] = useState(false);
   const [formData, setFormData] = useState<FormDataInt>(DefaultFormDataInt);
+
+  function validate() {
+    switch (step) {
+      case 0:
+        if (
+          formData.gender !== '' &&
+          formData.goal !== '' &&
+          formData.weight !== 0
+        ) {
+          return true;
+        }
+        return false;
+      case 1:
+        return true;
+      case 2:
+        if (formData.sportFrequency !== '' && formData.jobActivity !== '') {
+          return true;
+        }
+        return false;
+      case 3:
+        return true;
+    }
+  }
 
   const view = () => {
     switch (step) {
       case 0:
         return (
           <Personal
+            errors={errors}
             formData={formData}
             setFormData={setFormData}
             formquestions={[
@@ -39,6 +63,7 @@ function UserForm(props: any) {
       case 2:
         return (
           <Activity
+            errors={errors}
             formData={formData}
             setFormData={setFormData}
             formquestions={[formquestions[5], formquestions[6]]}
@@ -56,24 +81,29 @@ function UserForm(props: any) {
   };
 
   function handleSubmit() {
-    setStep(step + 1);
-    console.log(formData);
-    if (step === 3) {
-      props.sendformToParent(formData);
+    if (validate()) {
+      setErrors(false);
+      setStep(step + 1);
+    } else {
+      setErrors(true);
     }
+    if (step === 3) {
+      sendformToParent(formData);
+    }
+  }
+
+  function handleBack() {
+    setStep(step - 1);
+    setErrors(false);
   }
 
   return (
     <div className="formContainer">
-      {/* <div className="background"></div> */}
       <StepperWrapper step={step + 1} />
       {view()}
       <div className="buttons">
         {step > 0 && (
-          <button
-            className="button-secondary back"
-            onClick={() => setStep(step - 1)}
-          >
+          <button className="button-secondary back" onClick={handleBack}>
             Back
           </button>
         )}

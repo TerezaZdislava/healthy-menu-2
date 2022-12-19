@@ -29,7 +29,7 @@ function Home() {
               className="button-primary"
               onClick={() => navigate('/form')}
             >
-              Get me my healthy menu
+              Get my healthy menu
               {/* <img src="../../../assets/icons/arrow-right-small.svg"> */}
             </button>
           </div>

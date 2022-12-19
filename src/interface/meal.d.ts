@@ -13,7 +13,7 @@ export interface meal {
   steps: string;
   vegetarian: false;
   vegan: boolean;
-  milkfree: boolean;
+  lactosefree: boolean;
   glutenfree: boolean;
   calories: number;
   ingredients: Ingredient[];

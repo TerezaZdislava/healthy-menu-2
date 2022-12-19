@@ -11,6 +11,9 @@
   align-items: center;
   .formPart {
     z-index: 0;
+    .question {
+      margin-top: var(--margin-sm);
+    }
   }
   .buttons {
     z-index: 0;
@@ -41,9 +44,10 @@
 img {
   z-index: 0;
   // width: 125px;
-  height: 350px;
+  height: 320px;
 }
 h4 {
+  margin-top: 0;
   z-index: 0;
 }
 .formPart {
@@ -56,4 +60,7 @@ h4 {
   .MuiBox-root {
     align-self: center;
   }
+}
+.error {
+  color: red;
 }

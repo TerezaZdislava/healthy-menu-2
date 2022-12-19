@@ -1,8 +1,13 @@
 import '../styles/components/header.scss';
 import React, { useState } from 'react';
 import logo from '../assets/logo.svg';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import SvgIcon from '@mui/icons-material/MenuRounded';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
   let [mobileMenu, setMobileMenu] = useState(false);
 
   let menuButton;
@@ -12,7 +17,7 @@ function Header() {
         className="mobile-menu-icon"
         onClick={() => setMobileMenu(!mobileMenu)}
       >
-        open
+        <SvgIcon component={CloseRoundedIcon} />
       </button>
     );
   } else {
@@ -21,7 +26,7 @@ function Header() {
         className="mobile-menu-icon"
         onClick={() => setMobileMenu(!mobileMenu)}
       >
-        close
+        <SvgIcon component={MenuRoundedIcon} />
       </button>
     );
   }
@@ -29,7 +34,9 @@ function Header() {
   return (
     <div className="header-container">
       <div className="header">
-        <img className="logo" src={logo} alt={logo} />
+        <button className="logo" onClick={() => navigate('/')}>
+          <img src={logo} alt={logo} />
+        </button>
         {/* <object data="bubo-app/src/assets/icons/logo - square.svg" width="50" height="50"> </object> */}
         <div className="links">
           <span>
