@@ -13,6 +13,19 @@
   border-radius: 0px 0px 0px 80px;
   margin-bottom: var(--margin-md);
   padding: var(--margin-md);
+  .shopping-list {
+    margin: auto;
+    padding: 30px 70px 30px 70px;
+    background-color: white;
+    // margin: var(--margin-sm);
+    border-radius: 9px;
+    font-size: 18px;
+    .ingredient {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   .meal {
     display: flex;
     margin-bottom: var(--margin-md);
@@ -100,6 +113,9 @@
       margin: var(--margin-sm);
     }
   }
+}
+button {
+  font-family: 'Fira-sans';
 }
 @media (max-width: 500px) {
   .menuContainer {

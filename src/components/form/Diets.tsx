@@ -13,12 +13,12 @@ function Diet({
   setFormData: any;
   formquestions: FormQuestionObj[];
 }) {
-  // const numberOfMealsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setFormData({
-  //     ...formData,
-  //     numberOfMeals: (event.target as HTMLInputElement).value,
-  //   });
-  // };
+  const numberOfMealsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      numberOfMeals: parseInt((event.target as HTMLInputElement).value),
+    });
+  };
 
   const dietChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
@@ -60,7 +60,7 @@ function Diet({
           />
         </RadioGroup>
       </section>
-      {/* <section className="question">
+      <section className="question">
         <h4>{formquestions[1].q}</h4>
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
@@ -70,17 +70,17 @@ function Diet({
           onChange={numberOfMealsChange}
         >
           <FormControlLabel
-            value={formquestions[1].a[0]}
+            value={3}
             control={<Radio color="secondary" />}
             label={formquestions[1].a[0]}
           />
           <FormControlLabel
-            value={formquestions[1].a[1]}
+            value={5}
             control={<Radio color="secondary" />}
             label={formquestions[1].a[1]}
           />
         </RadioGroup>
-      </section> */}
+      </section>
     </form>
   );
 }

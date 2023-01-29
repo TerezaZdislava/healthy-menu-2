@@ -9,6 +9,8 @@ export interface FormDataInt {
   gender: string;
   weight: number;
   goal: string;
+  numberOfMeals: number;
+  snack: boolean;
   sportFrequency: string;
   jobActivity: string;
   bodyFat: number;

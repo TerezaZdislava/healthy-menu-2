@@ -3,7 +3,7 @@ import TaskIcon from '@mui/icons-material/Task';
 import SvgIcon from '@mui/icons-material/Task';
 import '../styles/menu.scss';
 
-function Meal({ meal }: { meal: meal }) {
+function Meal({ meal }: { meal: any }) {
   return (
     <>
       <h5 className="headline">{meal?.name}</h5>

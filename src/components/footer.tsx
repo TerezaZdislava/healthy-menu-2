@@ -1,4 +1,5 @@
 import '../styles/components/footer.scss';
+// import logo from '../assets/logo.svg';
 
 function Footer() {
   return (
@@ -6,11 +7,7 @@ function Footer() {
       <hr />
       <div className="information-box">
         <div className="logo-box">
-          <img
-            className="logo"
-            src="../../../assets/icons/logo-square-white.svg"
-            alt="logo"
-          />
+          {/* <img src={logo} alt={logo} /> */}
           <span>© Copyright 2022 </span>
           <span>Healthymenu s.r.o.</span>
         </div>

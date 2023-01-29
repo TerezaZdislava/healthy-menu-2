@@ -1,0 +1,519 @@
+[
+  {
+    "name": "Bread with pear and blue cheese",
+    "steps": "Divide blue cheese evenly between the baguette slices (about 1 ½ teaspoons per slice) and bake until cheese starts to melt, 3/4 minutes. Place the pears in a medium bowl and, using your hands, coat with the agave nectar or honey. Top each baguette slice with a pear slice and a few thyme leaves. Serve.",
+    "image": "https://i.imgur.com/62wmih4.jpg",
+    "vegetarian": true,
+    "vegan": false,
+    "lactoseFree": false,
+    "glutenFree": true,
+    "difficulty": "easy",
+    "calories": 300,
+    "preparationTime": 5,
+    "cookingTime": 15,
+    "temperature": "cold",
+    "breakfast": true,
+    "snack": false,
+    "lunch": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "whole grain bread (can be gluten free)",
+        "grams": 100,
+        "unit": "g"
+      },
+      {
+        "name": "cheese",
+        "grams": 100,
+        "unit": "g"
+      },
+      {
+        "name": "pear",
+        "grams": 100,
+        "gramsPerPiece": 100,
+        "unit": "pc"
+      },
+      {
+        "name": "honey",
+        "grams": 20,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "name": "Egg-Free Omelettes",
+    "steps": "Sauté onion in oil or water until translucent. Add mushrooms and zucchini with a little tamari, dill, garlic and onion powder and a sprinkle of nutritional yeast. Cook until soft. Mash tofu in a bowl. Add remaining ingredients and mix. Add sauté to the tofu batter and mix well. Flatten batter onto a baking sheet lined with baking paper (batter should be about one inch high). Bake in a pre-heated oven at 350° for 30 minutes or until golden-brown.",
+    "image": "https://i.imgur.com/BTG9S6k.jpg",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "easy",
+    "calories": 350,
+    "preparationTime": 5,
+    "cookingTime": 15,
+    "temperature": "hot",
+    "breakfast": true,
+    "snack": false,
+    "lunch": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "onion, diced",
+        "grams": 50,
+        "gramsPerPiece": 100,
+        "unit": "pc"
+      },
+      {
+        "name": "mushrooms",
+        "grams": 50,
+        "gramsPerPiece": 10,
+        "unit": "pc"
+      },
+      {
+        "name": "zucchini, diced",
+        "grams": 100,
+        "gramsPerPiece": 200,
+        "unit": "pc"
+      },
+      {
+        "name": "garlic ",
+        "grams": 10,
+        "gramsPerPiece": 10,
+        "unit": "clove"
+      },
+      {
+        "name": "medium-firm organic tofu",
+        "grams": 100,
+        "unit": "g"
+      },
+      {
+        "name": "tahini",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "turmeric",
+        "grams": 10,
+        "unit": "g"
+      },
+      {
+        "name": "herb seasoning",
+        "grams": 10,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "name": "Mom’s Pancakes",
+    "steps": "Place yeast in warm water with 1 t. sweetener. Let rise in a warm spot, until it bubbles up, doubling in size. Sift dry ingredients into a bowl, except sweetener, and stir. In a separate bowl, beat egg replacer with 1/2 cup of soy/rice milk until frothy. Add sweetener, remaining milk, oil and vanilla. Stir well. Pour wet into dry and mix until smooth. Add froth from risen yeast (without adding all the water). Mix until batter is smooth yet not thin, adding more milk if needed. Pour batter to desired size onto an oiled hot grill, cast-iron skillet, or non-stick pan. Important: When edges turn brown and bubbles form and remain open in the middle (approximately 1-2 minutes), flip over for another minute or two until done.",
+    "image": "https://i.imgur.com/aLwR3Kp.jpg",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": false,
+    "difficulty": "easy",
+    "calories": 350,
+    "preparationTime": 5,
+    "cookingTime": 30,
+    "temperature": "hot",
+    "breakfast": true,
+    "snack": false,
+    "lunch": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "active dry yeast",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "warm water",
+        "grams": 250,
+        "unit": "ml"
+      },
+      {
+        "name": "dry unrefined sweetener",
+        "grams": 10,
+        "unit": "g"
+      },
+      {
+        "name": "whole wheat (or spelt) pastry flour ",
+        "grams": 300,
+        "unit": "g"
+      },
+      {
+        "name": "safflower oil",
+        "grams": 80,
+        "unit": "ml"
+      },
+      {
+        "name": "soy or rice milk",
+        "grams": 150,
+        "unit": "ml"
+      },
+      {
+        "name": "vanilla",
+        "grams": 10,
+        "unit": "g"
+      },
+      {
+        "name": "baking powder",
+        "grams": 5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "name": "Tofu “Eggless” Salad",
+    "steps": "Remove tofu from freezer. Allow to thaw. Squeeze the water out of it Crumble tofu, add remaining ingredients and mix. Chill for a few hours so tofu can absorb the flavors. Season to taste. Serve as a salad or on sandwiches.",
+    "image": "https://i.imgur.com/smqqhT7.jpg",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "easy",
+    "calories": 390,
+    "preparationTime": 20,
+    "cookingTime": 0,
+    "temperature": "hot",
+    "breakfast": true,
+    "snack": false,
+    "lunch": false,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "medium-firm organic tofu",
+        "grams": 130,
+        "unit": "g"
+      },
+      {
+        "name": "tamari",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "tahini",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "oil",
+        "grams": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "vegan mayonnaise",
+        "grams": 50,
+        "unit": "g"
+      },
+      {
+        "name": "celery stalks, diced finely",
+        "grams": 100,
+        "gramsPerPiece": 30,
+        "unit": "pc"
+      },
+      {
+        "name": "onion slices, diced finely",
+        "grams": 30,
+        "gramsPerPiece": 60,
+        "unit": "g"
+      },
+      {
+        "name": "mustard",
+        "grams": 20,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "name": "Tofu/Tempeh Chunks & Cutlets",
+    "steps": "Cut tofu into six slices and marinate in tamari for 10 minutes. Make tahini dressing, using excess tamari from marinade. Spread on one side of each cutlet. Add half the nutritional yeast, bran and seasonings. Place each cutlet, coated side down, in an oiled frying pan on medium heat. While frying, coat the exposed cutlet sides with the remaining dressing, yeast, bran and seasonings. Cook until browned. Flip; cook 5 more minutes.",
+    "image": "https://i.imgur.com/AsWOjJg.jpg",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "easy",
+    "calories": 390,
+    "preparationTime": 20,
+    "cookingTime": 0,
+    "temperature": "hot",
+    "breakfast": false,
+    "snack": false,
+    "lunch": true,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "medium-firm organic tofu",
+        "grams": 250,
+        "unit": "g"
+      },
+      {
+        "name": "tamari or substitute",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "garlic",
+        "grams": 10,
+        "gramsPerPiece": 10,
+        "unit": "clove"
+      },
+      {
+        "name": "onion ",
+        "grams": 30,
+        "gramsPerPiece": 60,
+        "unit": "pc"
+      },
+      {
+        "name": "salt-free herb",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "vegan mayonnaise",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "salad",
+        "grams": 100,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "name": "Cashew Carrot Paté",
+    "steps": "In a food processor, using the “S” shaped blade, blend the garlic, onion and carrots to a fine consistency.Add cashews, and process along with the remaining ingredients. Stop periodically and scrape the sides with a rubber spatula. Continue to blend until creamy. Chill and serve.Variations: Try using soaked almonds or sunflower seeds instead of cashews. Replace the oil with a little water to help the ingredients blend together. Stir in a finely-chopped stalk of fresh celery.",
+    "image": "https://i.imgur.com/k1NvjjG.jpg",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "moderate",
+    "calories": 390,
+    "preparationTime": 20,
+    "cookingTime": 0,
+    "temperature": "hot",
+    "breakfast": false,
+    "snack": false,
+    "lunch": true,
+    "dinner": true,
+    "ingredients": [
+      {
+        "name": "cashews",
+        "grams": 250
+      },
+      {
+        "name": "carrots, peeled and chopped",
+        "grams": 50,
+        "gramsPerPiece": 50,
+        "unit": "pc"
+      },
+      {
+        "name": "sweet onion",
+        "grams": 20,
+        "unit": "g"
+      },
+      {
+        "name": "cold-pressed, organic oil",
+        "grams": 250,
+        "unit": "ml"
+      },
+      {
+        "name": "cloves garlic, diced",
+        "grams": 20,
+        "gramsPerPiece": 10,
+        "unit": "clove"
+      }
+    ]
+  },
+  {
+    "name": "Spring Rolls",
+    "steps": "Place wrappers in between two clean, damp towels to keep them from drying out.Separate one wrap and place on tray, being sure to cover the remaining wraps.In a small bowl or cup, mix arrowroot and water thoroughly. Spoon 2-3 heaping tablespoons of filling onto the bottom half of the middle of the Lumpia wrap.Roll up from the bottom. Tuck sides in, and continue rolling. Before you roll it up all the way, spoon a little arrowroot/water mixture onto the edge to stick it together. Set this one aside and continue with the rest of the rolls.Pour the oil into a shallow bowl. Gently coat each spring roll in oil and place on a baking sheet, at least half an inch apart. (Baking paper makes the clean-up easy.).Bake in the oven at 350° for 15-20 minutes or until golden-brown.Serve with Thai Peanut Curry Sauce or Sweet Ginger Sauce (below).",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "moderate",
+    "calories": 450,
+    "preparationTime": 20,
+    "cookingTime": 20,
+    "temperature": "cold",
+    "breakfast": false,
+    "snack": false,
+    "lunch": true,
+    "dinner": true,
+    "image": "https://i.imgur.com/92lKiyq.jpg",
+    "ingredients": [
+      {
+        "name": "firm organic tofu",
+        "grams": 250,
+        "unit": "g"
+      },
+      {
+        "name": "stock from vegetable sauté (below)",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "organic tamari",
+        "grams": 20,
+        "unit": "g"
+      },
+      {
+        "name": "onion, diced",
+        "grams": 60,
+        "gramsPerPiece": 60,
+        "unit": "pc"
+      },
+      {
+        "name": "ginger, grated",
+        "grams": 50,
+        "unit": "g"
+      },
+      {
+        "name": "carrots, finely chopped",
+        "grams": 50,
+        "gramsPerPiece": 50,
+        "unit": "g"
+      },
+      {
+        "name": "stalks celery, finely chopped",
+        "grams": 50,
+        "gramsPerPiece": 50,
+        "unit": "g"
+      },
+      {
+        "name": "green cabbage, shredded",
+        "grams": 50,
+        "unit": "g"
+      },
+      {
+        "name": "mung bean sprouts",
+        "grams": 50,
+        "unit": "g"
+      },
+      {
+        "name": "lumpia/egg roll wrappers",
+        "grams": 3,
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "name": "Tossed Tempeh Salad",
+    "steps": "In a salad bowl, break up lettuce and greens into bite-sized pieces. Gently toss with carrots, tomatoes, cucumber, pepper and celery. Set aside in a cool place. Sauté onion and garlic in tamari with a little water. Add the mushrooms and cook until soft. Let cool.Drain beans of any excess water and place in a bowl. Mix in mushroom sauté. Add the cooled tempeh chunks (next page) and stir. In a non-stick pan, toast sunflower seeds until browned. Set aside. Make dressing and toss over salad. Place dressed salad into individual bowls or plates. Top with tempeh mixture and toasted sunflower seeds.",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "moderate",
+    "calories": 350,
+    "preparationTime": 20,
+    "cookingTime": 20,
+    "temperature": "cold",
+    "breakfast": false,
+    "snack": false,
+    "lunch": true,
+    "dinner": true,
+    "image": "https://i.imgur.com/VBiYjPf.jpg",
+    "ingredients": [
+      {
+        "name": "carrots, grated",
+        "grams": 80,
+        "gramsPerPiece": 40,
+        "unit": "pc"
+      },
+      {
+        "name": "tomatoes, cubed",
+        "grams": 50,
+        "gramsPerPiece": 50,
+        "unit": "pc"
+      },
+      {
+        "name": "cucumber, peeled, sliced",
+        "grams": 50,
+        "gramsPerPiece": 150,
+        "unit": "pc"
+      },
+      {
+        "name": "button mushrooms",
+        "grams": 40,
+        "gramsPerPiece": 10,
+        "unit": "pc"
+      },
+      {
+        "name": "mixed cooked beans",
+        "grams": 70,
+        "unit": "g"
+      },
+      {
+        "name": "Tempeh Chunks",
+        "grams": 100,
+        "unit": "g"
+      },
+      {
+        "name": "sunflower seeds",
+        "grams": 30,
+        "unit": "g"
+      },
+      {
+        "name": "salad",
+        "grams": 90,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "name": "Apple",
+    "steps": "",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "moderate",
+    "calories": 50,
+    "preparationTime": 20,
+    "cookingTime": 20,
+    "temperature": "cold",
+    "breakfast": false,
+    "snack": true,
+    "lunch": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "apple",
+        "grams": 80,
+        "gramsPerPiece": 80,
+        "unit": "pc"
+      }
+    ]
+  },
+  {
+    "name": "Banana",
+    "steps": "",
+    "vegetarian": true,
+    "vegan": true,
+    "lactoseFree": true,
+    "glutenFree": true,
+    "difficulty": "moderate",
+    "calories": 50,
+    "preparationTime": 20,
+    "cookingTime": 20,
+    "temperature": "cold",
+    "breakfast": false,
+    "snack": true,
+    "lunch": false,
+    "dinner": false,
+    "ingredients": [
+      {
+        "name": "banana",
+        "grams": 80,
+        "gramsPerPiece": 80,
+        "unit": "pc"
+      }
+    ]
+  }
+]
